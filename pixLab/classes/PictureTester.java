@@ -16,15 +16,13 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
-  
-  public static void testKeepOnlyBlue()
+   public static void testKeepOnlyBlue()
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
     beach.keepOnlyBlue();
     beach.explore();
   }
-  
   public static void testNegate()
   {
     Picture beach = new Picture("beach.jpg");
@@ -32,23 +30,13 @@ public class PictureTester
     beach.negate();
     beach.explore();
   }
-  
   public static void testGrayscale()
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
-    beach.greyScale();
+    beach.grayscale();
     beach.explore();
   }
-  
-  public static void testFixUnderwater()
-  {
-    Picture water = new Picture("water.jpg");
-    water.explore();
-    water.fixUnderwater();
-    water.explore();
-  }
-  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -56,8 +44,27 @@ public class PictureTester
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
-  }
-  
+  }public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }  
+  public static void testMirrorHorizontal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }  
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore();
+  }  
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -66,12 +73,38 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
-  
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+  public static void testMirrorGull()
+  {
+    Picture gull = new Picture("seagull.jpg");
+    gull.explore();
+    gull.mirrorGull();
+    gull.explore();
+  }
+  public static void testCopy()
+  {
+    Picture snowman=new Picture("snowman.jpg");
+    Picture gull = new Picture("seagull.jpg");
+    gull.copy(snowman, 50, 200, 100, 150, 200, 250);
+    gull.explore();
+  }
   /** Method to test the collage method */
   public static void testCollage()
   {
     Picture canvas = new Picture("640x480.jpg");
     canvas.createCollage();
+    canvas.explore();
+  }
+  public static void testMyCollage()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
     canvas.explore();
   }
   
@@ -90,21 +123,24 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    //testZeroBlue();
+     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
-    //testGrayscale();
+     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
+    //testMirrorVerticalRightToLeft();
+    //testMirrorHorizontal();
+    //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    //testMyCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
